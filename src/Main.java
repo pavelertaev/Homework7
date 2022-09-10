@@ -10,10 +10,11 @@ public class Main {
         int salary = 100000;
         int total = 0;
         int i = 0;
-        for (; total < 2_459_000; i++) {
+        while ( total < 2_459_000) {
             total = total + total / 100;
             total = total + salary;
             System.out.println("Месяц " + i + " , сумма накоплений равна " + total + " рублей");
+            i++;
         }
         System.out.println(total);
         System.out.println(i);
@@ -29,13 +30,15 @@ public class Main {
         //10 9 8 7 6 5 4 3 2 1
         System.out.println("Задание 2");
         for (int a = 10; a >= 1; a--) {
-            System.out.println(a);
+            System.out.print(a+ " ");
         }
+        System.out.println();
         int b = 1;
         while (b <= 10) {
-            System.out.println(b);
+            System.out.print(b + " ");
             b++;
         }
+        System.out.println();
         //Циклы Задание 3
         //В стране Y население равно 12 миллионам человек.
         //Рождаемость составляет 17 человек на 1000 человек, смертность - 8 человек.
@@ -43,11 +46,12 @@ public class Main {
         //В консоль выведите результат операции на каждый год в формате "Год …, численность населения составляет … "
         System.out.println("Задание 3");
         int people = 12_000_000; // Население страны
-        int fertility = (people / 1000) * 17;
-        int mortality = (people / 1000) * 8;
-        for (int c = 1; c <= 10; c++) {
-            people = people + fertility;
-            people = people - mortality;
+        double fertility =(double) 17/1000;
+        double mortality = (double) 8/1000;
+        int c = 0;
+        while (c<10) {
+            people =(int) (people - (people * mortality) + (people * fertility));
+            c++;
             System.out.println("Год " + c + " , численность населения составляет " + people);
         }
 
@@ -145,8 +149,11 @@ public class Main {
         //2*9=18
         //2*10=20
         System.out.println("Задание 9");
-        for ( int n =2 ; n <= 20 ; n+=2 ){
-            System.out.println(n);
+        int a= 2;
+        int k = 0;
+        for ( int n =1 ;  n <= 10 ; n++){
+            k=a*n;
+            System.out.println(a + "*" + n + "=" + k  );
         }
 
 
